@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: burlywood;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+header nav ul li{
+    font-family: 'Rubik', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 5px 10px;
+}
+
+button{
+    font-family: 'Rubik', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+    color: darksalmon;
+}
+
+section{
+    height: 100vh;
+}
+
+section#hero{
+    background-color: burlywood ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#hero img{
+    width: 300px;
+    padding-bottom: 100px;
+}
+
+section#hero h1{
+    font-family: 'Rubik', sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+section#hero h2{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.projects-list{
+    background-color: burlywood ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-list img{
+    justify-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.projects-list h2{
+    font-family: 'Rubik', sans-serif;
+}
+
+.projects-list h3{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.projects-list p{
+    font-family: 'Rubik', sans-serif;
+    text-align: center;
+}
+
+.projects-list a{
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.projects-list li{
+    font-family: 'Rubik', sans-serif;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px 20px;
+}
+
+/*botón*/
+
+.contenedorBoton{
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: -1;
+}
+
+.button{
+    width: 0rem;
+    height: 0rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .2s;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+button img{
+    position: absolute;
+    top: 48%;
+    left: 48%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: .2s;
+}
+
+.show{
+    z-index: 10;
+}
+
+.show .button{
+    animation: popup .3s ease-in-out;
+    width: 6.6rem;
+    height: 6.6rem;
+    z-index: 11;
+}
+
+.show img{
+    transform: translate(-50%, -50%,) scale(1);
+}
+
+@keyframes popup{
+    0%{
+        width: 0rem;
+        height: 0rem;
+    }
+    50%{
+        width: 8rem;
+        height: 8rem;
+    }
+    100%{
+        width: 6.6rem;
+        height: 6.6rem;
+    }
+}
